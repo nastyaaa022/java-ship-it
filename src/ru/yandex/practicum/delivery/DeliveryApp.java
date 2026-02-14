@@ -178,15 +178,15 @@ public class DeliveryApp {
     private static void calculateCosts() {
         int totalCost = 0;
         for (StandardParcel p : standardParcel.getAllParcels()) {
-            totalCost += p.calculateDeliveryCost(p.weight);
+            totalCost += p.calculateDeliveryCost();
         }
 
         for (PerishableParcel p : perishableParcel.getAllParcels()) {
-            totalCost += p.calculateDeliveryCost(p.weight);
+            totalCost += p.calculateDeliveryCost();
         }
 
         for (FragileParcel p : fragileParcels.getAllParcels()) {
-            totalCost += p.calculateDeliveryCost(p.weight);
+            totalCost += p.calculateDeliveryCost();
         }
         System.out.println("Общая стоимость всех доставок: " + totalCost);
     }

@@ -22,7 +22,7 @@ public abstract class Parcel {
         System.out.println("Посылка: " + description + " доставлена по адресу: " + deliveryAddress);
     }
 
-    public abstract int calculateDeliveryCost(int weight);
+    public abstract int calculateDeliveryCost();
 
     @Override
     public String toString() {
@@ -32,5 +32,9 @@ public abstract class Parcel {
                 ", deliveryAddress='" + deliveryAddress + '\'' +
                 ", sendDay=" + sendDay +
                 '}';
+    }
+
+    public int getWeight() {
+        return weight;
     }
 }

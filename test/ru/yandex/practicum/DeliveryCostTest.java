@@ -19,21 +19,21 @@ public class DeliveryCostTest {
 
     @Test
     public void calculateDeliveryCostTestStandard() {
-        int actual = standardParcel.calculateDeliveryCost(5);
+        int actual = standardParcel.calculateDeliveryCost();
         int extend = 10;
         assertEquals(extend, actual, "Не верный результат для стандартной посылки");
     }
 
     @Test
     public void calculateDeliveryCostTestFragile() {
-        int actual = fragileParcel.calculateDeliveryCost(25);
+        int actual = fragileParcel.calculateDeliveryCost();
         int extend = 100;
         assertEquals(extend, actual, "Не верный результат для хрупкой посылки");
     }
 
     @Test
     public void calculateDeliveryCostTestPerishable() {
-        int actual = perishableParcel.calculateDeliveryCost(20);
+        int actual = perishableParcel.calculateDeliveryCost();
         int extend = 60;
         assertEquals(extend, actual, "Не верный результат для скоропортящейся посылки");
     }

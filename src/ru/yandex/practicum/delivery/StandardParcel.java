@@ -10,7 +10,7 @@ public class StandardParcel extends Parcel {
     }
 
     @Override
-    public int calculateDeliveryCost(int weight) {
+    public int calculateDeliveryCost() {
         return BASE_COST * weight;
     }
 
